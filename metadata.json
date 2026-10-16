@@ -1,0 +1,6 @@
+{
+  "name": "Andijon Akademik Litseyi — Dars Jadvali & O'qituvchilar Reytingi",
+  "description": "Akademik litsey dars jadvali, o'qituvchilar profillari, rasm yuklash va o'quvchilar tomonidan ustozlarni baholash hamda reyting tizimi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

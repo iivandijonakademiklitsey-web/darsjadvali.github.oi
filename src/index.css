@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
+    background-color: #0b2a3a;
+    color: #eaf4f6;
+  }
+
+  .font-heading {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-body {
+    font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+}
+
+.glass-card-subtle {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6fe0cf, #3fb7c4);
+  color: #0b2a3a;
+  font-weight: 700;
+  border-radius: 14px;
+  padding: 0.75rem 1.75rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 6px 20px -6px rgba(63, 183, 196, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -6px rgba(63, 183, 196, 0.6);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.04);
+  color: #eaf4f6;
+  border: 1px solid rgba(159, 193, 201, 0.25);
+  border-radius: 14px;
+  padding: 0.75rem 1.75rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(95, 208, 192, 0.5);
+  background: rgba(95, 208, 192, 0.1);
+  transform: translateY(-2px);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 24px -4px rgba(95, 208, 192, 0.35);
+  border-color: rgba(95, 208, 192, 0.4);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(95, 208, 192, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(95, 208, 192, 0.6);
+}
+
+/* TV Sunset Ocean Swaying Animations */
+@keyframes oceanSway {
+  0% {
+    transform: scale(1.02) translate(0px, 0px);
+  }
+  25% {
+    transform: scale(1.04) translate(-4px, -3px);
+  }
+  50% {
+    transform: scale(1.05) translate(3px, -5px);
+  }
+  75% {
+    transform: scale(1.03) translate(-2px, -2px);
+  }
+  100% {
+    transform: scale(1.02) translate(0px, 0px);
+  }
+}
+
+.ocean-sway-layer {
+  animation: oceanSway 18s ease-in-out infinite alternate;
+}
+
+@keyframes waveShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.ocean-wave-shimmer {
+  background: radial-gradient(circle at 50% 100%, rgba(251, 146, 60, 0.25), transparent 70%),
+              linear-gradient(180deg, transparent 0%, rgba(20, 184, 166, 0.15) 100%);
+  background-size: 200% 200%;
+  animation: waveShimmer 10s ease-in-out infinite;
+}
+
+/* Upward Vertical Scrolling Marquee for Teachers */
+@keyframes scrollUpward {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-vertical-scroll {
+  animation: scrollUpward 40s linear infinite;
+}
+
+.animate-vertical-scroll:hover {
+  animation-play-state: paused;
+}
